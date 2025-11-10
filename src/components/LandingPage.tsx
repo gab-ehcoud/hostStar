@@ -101,7 +101,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
               {
                 step: 1,
                 title: 'Register',
-                description: 'Sign up and choose your host type - Travel Guide or Service Provider',
+                description: 'Sign up and choose your category to participate as a host or service provider',
                 icon: Users,
                 color: 'orange',
               },
