@@ -17,7 +17,7 @@ export interface User {
   phone: string;
   name: string;
   email: string;
-  hostType: 'travel' | 'service';
+  hostType: 'digital-detox' | 'healthcare-wellness' | 'experiences-entertainment' | 'culture-craft' | 'adventure-exploration' | 'stay-hospitality' | 'culinary-gastronomy' | 'photography' | 'travel' | 'service';
   kycVerified: boolean;
   createdAt: string;
   profileComplete: boolean;
@@ -30,27 +30,27 @@ export default function App() {
 
   // Load user from localStorage on mount
   useEffect(() => {
-    const savedUser = localStorage.getItem('hoststaar_user');
+    const savedUser = localStorage.getItem('hoststar_user');
     if (savedUser) {
       try {
         setUser(JSON.parse(savedUser));
         setCurrentPage('dashboard');
       } catch (error) {
         console.error('Error loading saved user:', error);
-        localStorage.removeItem('hoststaar_user');
+        localStorage.removeItem('hoststar_user');
       }
     }
   }, []);
 
   const handleLogin = (loggedInUser: User) => {
     setUser(loggedInUser);
-    localStorage.setItem('hoststaar_user', JSON.stringify(loggedInUser));
+    localStorage.setItem('hoststar_user', JSON.stringify(loggedInUser));
     setCurrentPage('dashboard');
   };
 
   const handleLogout = () => {
     setUser(null);
-    localStorage.removeItem('hoststaar_user');
+    localStorage.removeItem('hoststar_user');
     setCurrentPage('landing');
   };
 

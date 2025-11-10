@@ -91,7 +91,7 @@ export function LoginForm({ onNavigate, onSuccess }: LoginFormProps) {
           </div>
           <h1 className="text-4xl mb-2">Welcome Back</h1>
           <p className="text-xl text-gray-600">
-            Login to continue your HostStaar journey
+            Login to continue your HostStar journey
           </p>
         </div>
 

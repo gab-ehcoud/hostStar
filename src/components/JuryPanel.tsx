@@ -131,7 +131,7 @@ export function JuryPanel({ onNavigate }: JuryPanelProps) {
             </div>
             <h1 className="text-4xl mb-2">Jury Panel</h1>
             <p className="text-xl text-gray-600">
-              Expert scoring for HostStaar entries
+              Expert scoring for HostStar entries
             </p>
           </div>
 

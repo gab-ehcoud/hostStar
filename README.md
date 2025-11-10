@@ -1,7 +1,5 @@
 
-  # HostStaar Contest Platform
-
-  This is a code bundle for HostStaar Contest Platform. The original project is available at https://www.figma.com/design/I1BAeFHI0TONrbbPL3zyzG/HostStaar-Contest-Platform.
+  # HostStar Contest Platform
 
   ## Running the code
 

@@ -124,11 +124,14 @@ export function UploadSection({ user, onSuccess, onCancel }: UploadSectionProps)
                 className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               >
                 <option value="general">General</option>
-                <option value="cultural">Cultural & Heritage</option>
-                <option value="adventure">Adventure & Trekking</option>
-                <option value="culinary">Culinary Experiences</option>
-                <option value="wellness">Wellness & Yoga</option>
-                <option value="homestay">Homestay & Accommodation</option>
+                <option value="digital-detox">Digital Detox & Mindfulness</option>
+                <option value="healthcare-wellness">Healthcare & Wellness</option>
+                <option value="experiences-entertainment">Experiences & Live Entertainment</option>
+                <option value="culture-craft">Culture & Craft</option>
+                <option value="adventure-exploration">Adventure & Exploration</option>
+                <option value="stay-hospitality">Stay & Hospitality</option>
+                <option value="culinary-gastronomy">Culinary & Gastronomy</option>
+                <option value="photography">Photography</option>
               </select>
             </div>
 

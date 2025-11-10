@@ -13,7 +13,7 @@ export function RegistrationForm({ onNavigate, onSuccess }: RegistrationFormProp
     phone: '',
     name: '',
     email: '',
-    hostType: 'travel' as 'travel' | 'service',
+    hostType: '' as 'digital-detox' | 'healthcare-wellness' | 'experiences-entertainment' | 'culture-craft' | 'adventure-exploration' | 'stay-hospitality' | 'culinary-gastronomy' | 'photography' | 'travel' | 'service' | '',
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -58,7 +58,7 @@ export function RegistrationForm({ onNavigate, onSuccess }: RegistrationFormProp
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-pink-500 rounded-full mb-4">
             <UserCircle className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-4xl mb-2">Join HostStaar India</h1>
+          <h1 className="text-4xl mb-2">Join HostStar India</h1>
           <p className="text-xl text-gray-600">
             Register to showcase your hosting talent
           </p>
@@ -69,38 +69,77 @@ export function RegistrationForm({ onNavigate, onSuccess }: RegistrationFormProp
             {/* Host Type Selection */}
             <div>
               <label className="block text-sm mb-3">Select Your Host Category *</label>
-              <div className="grid md:grid-cols-2 gap-4">
-                <button
-                  type="button"
-                  onClick={() => setFormData({ ...formData, hostType: 'travel' })}
-                  className={`p-6 rounded-xl border-2 transition-all ${
-                    formData.hostType === 'travel'
-                      ? 'border-orange-500 bg-orange-50'
-                      : 'border-gray-200 hover:border-gray-300'
-                  }`}
+              <div className="space-y-3">
+                <select
+                  required
+                  value={formData.hostType}
+                  onChange={(e) => setFormData({ ...formData, hostType: e.target.value as any })}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 >
-                  <div className="text-4xl mb-2">🧭</div>
-                  <div className="text-lg mb-1">Travel Host</div>
-                  <div className="text-sm text-gray-600">
-                    Guides, Storytellers, Adventure Leaders
+                  <option value="">Choose your category...</option>
+                  <option value="digital-detox">Digital Detox & Mindfulness</option>
+                  <option value="healthcare-wellness">Healthcare & Wellness</option>
+                  <option value="experiences-entertainment">Experiences & Live Entertainment</option>
+                  <option value="culture-craft">Culture & Craft</option>
+                  <option value="adventure-exploration">Adventure & Exploration</option>
+                  <option value="stay-hospitality">Stay & Hospitality</option>
+                  <option value="culinary-gastronomy">Culinary & Gastronomy</option>
+                  <option value="photography">Photography</option>
+                </select>
+                
+                {formData.hostType && (
+                  <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+                    <h4 className="font-semibold text-sm mb-2">Category Details:</h4>
+                    {formData.hostType === 'digital-detox' && (
+                      <div className="text-sm text-gray-600">
+                        <p><strong>Hosts:</strong> Nature immersion stays, Silent meditation retreats, Mindfulness day experiences</p>
+                        <p><strong>Service Providers:</strong> Yoga instructors, Meditation coaches, Breathwork facilitators</p>
+                      </div>
+                    )}
+                    {formData.hostType === 'healthcare-wellness' && (
+                      <div className="text-sm text-gray-600">
+                        <p><strong>Hosts:</strong> Fitness retreats, Holistic wellness stays, Ayurvedic & naturopathy centers, Spas & therapeutic nutrition focus</p>
+                        <p><strong>Service Providers:</strong> Personal trainers, Nutritionists, Wellness consultants, Therapists</p>
+                      </div>
+                    )}
+                    {formData.hostType === 'experiences-entertainment' && (
+                      <div className="text-sm text-gray-600">
+                        <p><strong>Hosts:</strong> Parties & event spaces, Festival grounds, Music venues</p>
+                        <p><strong>Service Providers:</strong> DJs, Event planners, Sound & light technicians</p>
+                      </div>
+                    )}
+                    {formData.hostType === 'culture-craft' && (
+                      <div className="text-sm text-gray-600">
+                        <p><strong>Hosts:</strong> Traditional cooking classes, Handicraft workshops, Folk art centers</p>
+                        <p><strong>Service Providers:</strong> Local artisans, Culinary experts, Cultural historians</p>
+                      </div>
+                    )}
+                    {formData.hostType === 'adventure-exploration' && (
+                      <div className="text-sm text-gray-600">
+                        <p><strong>Hosts:</strong> Trekking & hiking guides, Camp organizers, Rafting & diving instructors, Wildlife photographers</p>
+                        <p><strong>Service Providers:</strong> Adventure guides, Naturalists, Safety experts, Equipment rental providers</p>
+                      </div>
+                    )}
+                    {formData.hostType === 'stay-hospitality' && (
+                      <div className="text-sm text-gray-600">
+                        <p><strong>Hosts:</strong> Homestays & farmstays, Boutique hotels, Houseboats, Heritage homes</p>
+                        <p><strong>Service Providers:</strong> Property managers, Hospitality trainers, Local hosts</p>
+                      </div>
+                    )}
+                    {formData.hostType === 'culinary-gastronomy' && (
+                      <div className="text-sm text-gray-600">
+                        <p><strong>Hosts:</strong> Themed dining experiences, Food & beverage experiences, Culinary retreats</p>
+                        <p><strong>Service Providers:</strong> Chefs, Sommeliers, Mixologists, Culinary instructors</p>
+                      </div>
+                    )}
+                    {formData.hostType === 'photography' && (
+                      <div className="text-sm text-gray-600">
+                        <p><strong>Hosts:</strong> Photography workshops and locations</p>
+                        <p><strong>Service Providers:</strong> Professional photographers, Videographers & content creators, Travel writers & curators</p>
+                      </div>
+                    )}
                   </div>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => setFormData({ ...formData, hostType: 'service' })}
-                  className={`p-6 rounded-xl border-2 transition-all ${
-                    formData.hostType === 'service'
-                      ? 'border-pink-500 bg-pink-50'
-                      : 'border-gray-200 hover:border-gray-300'
-                  }`}
-                >
-                  <div className="text-4xl mb-2">🏠</div>
-                  <div className="text-lg mb-1">Service Host</div>
-                  <div className="text-sm text-gray-600">
-                    Homestays, Cafés, Wellness Providers
-                  </div>
-                </button>
+                )}
               </div>
             </div>
 

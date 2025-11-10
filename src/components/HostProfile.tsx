@@ -4,6 +4,39 @@ import { projectId, publicAnonKey } from '../utils/supabase/info';
 import type { Page } from '../App';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
+// Helper functions for host type display
+const getHostTypeDisplay = (hostType: string): string => {
+  switch (hostType) {
+    case 'digital-detox': return '🧘 Digital Detox & Mindfulness';
+    case 'healthcare-wellness': return '💚 Healthcare & Wellness';
+    case 'experiences-entertainment': return '🎭 Experiences & Live Entertainment';
+    case 'culture-craft': return '🎨 Culture & Craft';
+    case 'adventure-exploration': return '🏔️ Adventure & Exploration';
+    case 'stay-hospitality': return '🏠 Stay & Hospitality';
+    case 'culinary-gastronomy': return '🍽️ Culinary & Gastronomy';
+    case 'photography': return '📸 Photography';
+    case 'travel': return '🧭 Travel Host'; // Legacy support
+    case 'service': return '🏠 Service Host'; // Legacy support
+    default: return '🌟 Host';
+  }
+};
+
+const getHostTypeColor = (hostType: string): string => {
+  switch (hostType) {
+    case 'digital-detox': return 'bg-green-100 text-green-700';
+    case 'healthcare-wellness': return 'bg-blue-100 text-blue-700';
+    case 'experiences-entertainment': return 'bg-purple-100 text-purple-700';
+    case 'culture-craft': return 'bg-yellow-100 text-yellow-700';
+    case 'adventure-exploration': return 'bg-orange-100 text-orange-700';
+    case 'stay-hospitality': return 'bg-pink-100 text-pink-700';
+    case 'culinary-gastronomy': return 'bg-red-100 text-red-700';
+    case 'photography': return 'bg-indigo-100 text-indigo-700';
+    case 'travel': return 'bg-orange-100 text-orange-700'; // Legacy support
+    case 'service': return 'bg-pink-100 text-pink-700'; // Legacy support
+    default: return 'bg-gray-100 text-gray-700';
+  }
+};
+
 interface HostProfileProps {
   entryId: string;
   onNavigate: (page: Page) => void;
@@ -142,11 +175,9 @@ export function HostProfile({ entryId, onNavigate }: HostProfileProps) {
               <div className="flex items-center justify-between mb-4">
                 <h1 className="text-3xl">{entry.title}</h1>
                 <span className={`px-3 py-1 rounded-full text-sm ${
-                  entry.hostType === 'travel'
-                    ? 'bg-orange-100 text-orange-700'
-                    : 'bg-pink-100 text-pink-700'
+                  getHostTypeColor(entry.hostType)
                 }`}>
-                  {entry.hostType === 'travel' ? '🧭 Travel Host' : '🏠 Service Host'}
+                  {getHostTypeDisplay(entry.hostType)}
                 </span>
               </div>
 

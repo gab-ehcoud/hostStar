@@ -31,7 +31,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
           <h1 className="text-5xl md:text-7xl mb-6">
             Become India's Next
             <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-              HostStaar
+              HostStar
             </span>
           </h1>
 
@@ -61,7 +61,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
-              { icon: Users, label: 'Active Hosts', value: '500+' },
+              { icon: Users, label: 'Active Hosts', value: '5000+' },
               { icon: Trophy, label: 'Prize Pool', value: '₹10L' },
               { icon: Star, label: 'Public Votes', value: '50K+' },
               { icon: Globe, label: 'Cities', value: '100+' },
@@ -90,7 +90,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4">How HostStaar Works</h2>
+            <h2 className="text-4xl mb-4">How HostStar Works</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Join India's largest host discovery platform in 4 simple steps
             </p>
@@ -149,80 +149,208 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4">Choose Your Category</h2>
             <p className="text-xl text-gray-600">
-              We're looking for India's best hosts across two categories
+              We're looking for India's best hosts across eight specialized categories
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Travel Hosts */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Digital Detox & Mindfulness */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
-              <div className="h-64 relative">
+              <div className="h-48 relative">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1595368062405-e4d7840cba14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZHZlbnR1cmUlMjB0cmVra2luZyUyMG1vdW50YWluc3xlbnwxfHx8fDE3NjI2NzMxMzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Travel Host"
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                  alt="Digital Detox & Mindfulness"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl mb-1">Travel Hosts</h3>
-                  <p className="text-sm text-gray-200">Guides, Storytellers, Adventure Leaders</p>
+                  <h3 className="text-xl mb-1">Digital Detox & Mindfulness</h3>
                 </div>
               </div>
-              <div className="p-6">
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-orange-500">✓</span>
-                    <span>Local tour guides and cultural storytellers</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-orange-500">✓</span>
-                    <span>Trekking and adventure experience leaders</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-orange-500">✓</span>
-                    <span>Heritage and historical site experts</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-orange-500">✓</span>
-                    <span>Photography and wildlife guides</span>
-                  </li>
-                </ul>
+              <div className="p-4">
+                <div className="mb-3">
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Hosts:</h4>
+                  <p className="text-sm text-gray-600">Nature immersion stays, Silent meditation retreats, Mindfulness day experiences</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Service Providers:</h4>
+                  <p className="text-sm text-gray-600">Yoga instructors, Meditation coaches, Breathwork facilitators</p>
+                </div>
               </div>
             </div>
 
-            {/* Service Hosts */}
+            {/* Healthcare & Wellness */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
-              <div className="h-64 relative">
+              <div className="h-48 relative">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1746549854902-332ec790ac7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYSUyMGhvc3BpdGFsaXR5JTIwaG9tZXN0YXl8ZW58MXx8fHwxNzYyNzUzNDg5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Service Host"
+                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                  alt="Healthcare & Wellness"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl mb-1">Service Hosts</h3>
-                  <p className="text-sm text-gray-200">Homestays, Cafés, Wellness Providers</p>
+                  <h3 className="text-xl mb-1">Healthcare & Wellness</h3>
                 </div>
               </div>
-              <div className="p-6">
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-pink-500">✓</span>
-                    <span>Homestay and boutique accommodation owners</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-pink-500">✓</span>
-                    <span>Local café and culinary experience hosts</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-pink-500">✓</span>
-                    <span>Wellness and yoga retreat providers</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-pink-500">✓</span>
-                    <span>Farm stays and eco-tourism hosts</span>
-                  </li>
-                </ul>
+              <div className="p-4">
+                <div className="mb-3">
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Hosts:</h4>
+                  <p className="text-sm text-gray-600">Fitness retreats, Holistic wellness stays, Ayurvedic & naturopathy centers, Spas & therapeutic nutrition focus</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Service Providers:</h4>
+                  <p className="text-sm text-gray-600">Personal trainers, Nutritionists, Wellness consultants, Therapists</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Experiences & Live Entertainment */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+              <div className="h-48 relative">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                  alt="Experiences & Live Entertainment"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl mb-1">Experiences & Live Entertainment</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="mb-3">
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Hosts:</h4>
+                  <p className="text-sm text-gray-600">Parties & event spaces, Festival grounds, Music venues</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Service Providers:</h4>
+                  <p className="text-sm text-gray-600">DJs, Event planners, Sound & light technicians</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Culture & Craft */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+              <div className="h-48 relative">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                  alt="Culture & Craft"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl mb-1">Culture & Craft</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="mb-3">
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Hosts:</h4>
+                  <p className="text-sm text-gray-600">Traditional cooking classes, Handicraft workshops, Folk art centers</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Service Providers:</h4>
+                  <p className="text-sm text-gray-600">Local artisans, Culinary experts, Cultural historians</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Adventure & Exploration */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+              <div className="h-48 relative">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1595368062405-e4d7840cba14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                  alt="Adventure & Exploration"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl mb-1">Adventure & Exploration</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="mb-3">
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Hosts:</h4>
+                  <p className="text-sm text-gray-600">Trekking & hiking guides, Camp organizers, Rafting & diving instructors, Wildlife photographers</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Service Providers:</h4>
+                  <p className="text-sm text-gray-600">Adventure guides, Naturalists, Safety experts, Equipment rental providers</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Stay & Hospitality */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+              <div className="h-48 relative">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1746549854902-332ec790ac7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                  alt="Stay & Hospitality"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl mb-1">Stay & Hospitality</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="mb-3">
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Hosts:</h4>
+                  <p className="text-sm text-gray-600">Homestays & farmstays, Boutique hotels, Houseboats, Heritage homes</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Service Providers:</h4>
+                  <p className="text-sm text-gray-600">Property managers, Hospitality trainers, Local hosts</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Culinary & Gastronomy */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+              <div className="h-48 relative">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                  alt="Culinary & Gastronomy"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl mb-1">Culinary & Gastronomy</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="mb-3">
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Hosts:</h4>
+                  <p className="text-sm text-gray-600">Themed dining experiences, Food & beverage experiences, Culinary retreats</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Service Providers:</h4>
+                  <p className="text-sm text-gray-600">Chefs, Sommeliers, Mixologists, Culinary instructors</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photography */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+              <div className="h-48 relative">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                  alt="Photography"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl mb-1">Photography</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="mb-3">
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Hosts:</h4>
+                  <p className="text-sm text-gray-600">Photography workshops and locations</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm text-gray-800 mb-2">Service Providers:</h4>
+                  <p className="text-sm text-gray-600">Professional photographers, Videographers & content creators, Travel writers & curators</p>
+                </div>
               </div>
             </div>
           </div>
@@ -233,7 +361,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       <section className="py-20 bg-gradient-to-r from-orange-600 via-pink-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl mb-6">
-            Ready to Become a HostStaar?
+            Ready to Become a HostStar?
           </h2>
           <p className="text-xl mb-8 text-white/90">
             Join hundreds of talented hosts competing for recognition and a chance to be featured on AARNA's marketplace

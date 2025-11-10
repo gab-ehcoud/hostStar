@@ -2,6 +2,23 @@ import { Menu, X, Home, Trophy, Users, LogOut, LayoutDashboard, UserCircle, Shie
 import { useState } from 'react';
 import type { User, Page } from '../App';
 
+// Helper function to get user-friendly host type display
+const getHostTypeDisplayName = (hostType: string): string => {
+  switch (hostType) {
+    case 'digital-detox': return 'Digital Detox & Mindfulness';
+    case 'healthcare-wellness': return 'Healthcare & Wellness';
+    case 'experiences-entertainment': return 'Experiences & Entertainment';
+    case 'culture-craft': return 'Culture & Craft';
+    case 'adventure-exploration': return 'Adventure & Exploration';
+    case 'stay-hospitality': return 'Stay & Hospitality';
+    case 'culinary-gastronomy': return 'Culinary & Gastronomy';
+    case 'photography': return 'Photography';
+    case 'travel': return 'Travel'; // Legacy support
+    case 'service': return 'Service'; // Legacy support
+    default: return hostType.charAt(0).toUpperCase() + hostType.slice(1);
+  }
+};
+
 interface NavigationProps {
   user: User | null;
   currentPage: Page;
@@ -34,7 +51,7 @@ export function Navigation({ user, currentPage, onNavigate, onLogout }: Navigati
               <Home className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl">HostStaar India</h1>
+              <h1 className="text-xl">HostStar India</h1>
               <p className="text-xs text-gray-500">Powered by AARNA</p>
             </div>
           </div>
@@ -63,7 +80,7 @@ export function Navigation({ user, currentPage, onNavigate, onLogout }: Navigati
               <div className="flex items-center space-x-4 pl-6 border-l border-gray-200">
                 <div className="text-right">
                   <p className="text-sm">{user.name}</p>
-                  <p className="text-xs text-gray-500 capitalize">{user.hostType} Host</p>
+                  <p className="text-xs text-gray-500">{getHostTypeDisplayName(user.hostType)} Host</p>
                 </div>
                 <button
                   onClick={onLogout}
@@ -139,7 +156,7 @@ export function Navigation({ user, currentPage, onNavigate, onLogout }: Navigati
                 <>
                   <div className="px-4 py-3 bg-gray-50 rounded-lg">
                     <p className="text-sm">{user.name}</p>
-                    <p className="text-xs text-gray-500 capitalize">{user.hostType} Host</p>
+                    <p className="text-xs text-gray-500">{getHostTypeDisplayName(user.hostType)} Host</p>
                   </div>
                   <button
                     onClick={() => {
